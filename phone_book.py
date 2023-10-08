@@ -22,7 +22,7 @@ def greeting(*args) -> str:
 
 @user_error
 def add_contact(*args):
-    record_id = args[0].lower()
+    record_id = args[0]  # .lower()
     record_value = args[1]
 
     try:
@@ -38,7 +38,7 @@ def add_contact(*args):
 
 @user_error
 def change_contact(*args):
-    record_id = args[0].lower()
+    record_id = args[0]  # .lower()
     new_value = args[1]
 
     try:
@@ -56,7 +56,7 @@ def change_contact(*args):
 
 @user_error
 def get_phone(*args):
-    record_id = args[0].lower()
+    record_id = args[0]  # .lower()
     if record_id in records:
         return f"Phone number for contact '{record_id}' is {records[record_id]}."
     return f"Contact '{record_id}' not found."
